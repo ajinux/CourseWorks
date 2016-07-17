@@ -7,5 +7,5 @@ public interface Salary
 
 public class SalariedEmployee
 {
-  int 
+//code 
 }
