@@ -1,0 +1,7 @@
+Exercise: 4  
+		
+Write a Java program to handle exceptions for a banking system.
+ Get the details like account no, name of customer, account type, amount.
+ If the balance goes below a threshold limit, raise a WithdrawalNotPossible exception.
+ [Hint: account no should have 10 digits, name should have only alphabets, account type should be savings or current, amount to be non-negative. 
+ If any discrepancy occurs, raise and InvalidCredentials exception]
