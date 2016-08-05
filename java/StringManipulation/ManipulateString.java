@@ -25,16 +25,44 @@ public class ManipulateString
 	    for(int i=1;i<=max;i++)
 	    {
 	    	int wordcount=0;
+	    	String[] s2=new String[wordlen.length];
+	    	int len=0;
 	    	for(int j=0;j<wordlen.length;j++)
 	 	    {
 	 	      if(wordlen[j]==i)
 	 	      {
 	 	    	  wordcount++;
-	 	    	  s1=s1.concat(StringArray[j]+" ");
+	 	    	  s2[len]=StringArray[j];
+	 	    	  len++;
 	 	      }
 	 	    }
 	    	if(wordcount>0)
+	    	{
 	    	 System.out.println("\nNo. of word that have "+i+" Character : "+wordcount);
+	    	 if(wordcount==1)
+	    	 {
+	    		 s1=s1.concat(s2[0]+" ");
+	    	 }
+	    	 else
+	    	 {
+	    		 for(int j=0;j<len;j++)
+	    		 {
+	    			 for(int k=j+1;k<len;k++)
+	    			 {
+	    				if(s2[j].compareTo(s2[k])>0)
+	    				{
+	    					String temp=s2[j];
+	    					s2[j]=s2[k];
+	    					s2[k]=temp;
+	    				}
+	    			 }
+	    		 }
+	    		 for(int j=0;j<len;j++)
+	    		 {
+	    			 s1=s1.concat(s2[j]+" ");
+	    		 }
+	    	 }
+	    	}
 	    }
     	System.out.println("\n"+s1);	
 	    
