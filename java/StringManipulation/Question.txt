@@ -1,0 +1,6 @@
+Exercise: 5	  			
+
+Write a Java program in input a string of words and count the number of 1, 2, 3, 4 …..character words.
+Arrange the words in the increasing order of their length.
+[Hint: if the string is “This is a test program”, 1 character word -1, 2 character -1, 4 character – 2, 7 character -1.
+ The output should be “ a is test this program”]
