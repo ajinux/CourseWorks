@@ -1,3 +1,0 @@
-Exercise: 3
-
-The Transport interface declares a deliver method. The abstract class Animal is the superclass of the Tiger, Camel, Deer and Donkey classes. The Transport interface is implemented by the Camel and Donkey classes. Write a Java program to initialize an array of four Animal objects. If the object implements the Transport interface, the deliver method is invoked. Use suitable data members.
