@@ -1,0 +1,19 @@
+5 
+3 2 3
+rahul 
+0 1 1 
+6 7 7 
+gopinath 
+2 1 1 
+4 2 2 
+kannan 
+3 0 0 
+4 5 3 
+nickil 
+2 1 1 
+3 2 2 
+sathish 
+4 3 2 
+5 4 5
+sathish
+1 1 1
