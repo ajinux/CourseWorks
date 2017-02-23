@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<title>Form Validation</title>
+	<style>
+	table, th, td {
+	   border: 0px solid black;
+	}
+	tr{
+	   height: 45px;
+	}
+	</style>
+</head>
+
+<body>
+	<div align="center" style="margin:12%">
+		<b>Enter Your Details</b>
+
+		<table aligh="center">
+			<col width="100">
+			<col width="100">
+			<col width="100">
+			<tr>
+				<td><label>Name</label>
+				</td>
+
+				<td><input id="name" name="name" placeholder="Enter your name" type="text">
+				</td>
+
+				<td>
+					<ul>
+						<li id="ename" style="display:none">
+						</li>
+					</ul>
+				</td>
+			</tr>
+ 
+			<tr>
+				<td><label>Mail ID</label>
+				</td>
+
+				<td>
+					<input id="mailid" name="mailid" placeholder="Enter your mailid" type=
+					"text">
+				</td>
+                <td>		
+					<ul>
+						<li id="emailid" style="display:none">
+						</li>
+					</ul>
+				</td>
+			</tr>
+			<tr>
+				<td type="hidden">
+				</td>
+
+				<td><button id="onsubmit" onclick="loadDoc();" style="float:right;">Validate</button>
+				</td>
+			</tr>
+		</table>
+</body>
+<script>
+function isInArray(value, array) {
+  return array.indexOf(value) > -1;
+}
+function loadDoc() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      myFunction(this);
+    }
+  };
+  xhttp.open("GET", "http://localhost/creds.xml", true);
+  xhttp.send();
+}
+function myFunction(xml) {
+  var i;
+  var xmlDoc = xml.responseXML;
+  console.log(xmlDoc);
+var x = xmlDoc.getElementsByTagName("CRED");
+allusername = [];
+allemailid = [];
+  for (i = 0; i <x.length; i++) { 
+    allusername.push(x[i].getElementsByTagName("USERNAME")[0].innerHTML);
+    allemailid.push(x[i].getElementsByTagName("MAILID")[0].innerHTML);
+  }
+   console.log(allemailid);
+   console.log(allusername);
+
+   var usrname = document.getElementById('name').value;
+   var mailid = document.getElementById('mailid').value;
+
+   if(isInArray(usrname, allusername))
+   {
+   	 document.getElementById('ename').style.display = "unset";
+   	 document.getElementById('ename').innerHTML = "This username is already taken";
+   }
+   if(isInArray(mailid, allemailid))
+   {
+   	 document.getElementById('emailid').style.display = "unset";
+   	 document.getElementById('emailid').innerHTML = "This mailid is already taken";
+   }
+}
+</script>
+
+</script>
+</html>
