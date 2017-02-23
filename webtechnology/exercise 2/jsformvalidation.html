@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<title>Form Validation</title>
+	<style>
+	table, th, td {
+	   border: 0px solid black;
+	}
+	tr{
+	   height: 45px;
+	}
+	</style>
+</head>
+
+<body>
+	<div align="center" style="margin:12%">
+		<b>Enter Your Details</b>
+
+		<table aligh="center">
+			<col width="100">
+			<col width="100">
+			<col width="100">
+			<tr>
+				<td><label>Name</label>
+				</td>
+
+				<td><input id="name" name="name" placeholder="Enter your name" type="text">
+				</td>
+
+				<td>
+					<ul>
+						<li id="ename" style="display:none">
+						</li>
+					</ul>
+				</td>
+			</tr>
+
+        <!-- 
+			<tr>
+				<td><label>Roll No</label>
+				</td>
+
+				<td>
+					<input id="rollno" name="rollno" placeholder="Enter your rollno" type=
+					"text">
+                </td>
+                <td>
+					<ul>
+						<li id="erollno" style="display:none">
+						</li>
+					</ul>
+				</td>
+			</tr>
+
+		-->
+			<tr>
+				<td><label>Mail ID</label>
+				</td>
+
+				<td>
+					<input id="mailid" name="mailid" placeholder="Enter your mailid" type=
+					"text">
+				</td>
+                <td>		
+					<ul>
+						<li id="emailid" style="display:none">
+						</li>
+					</ul>
+				</td>
+			</tr>
+
+
+			<tr>
+				<td><label>Phone No</label>
+				</td>
+
+				<td>
+					<input id="phone" name="phone" placeholder="Enter your phone number" type=
+					"text">
+				</td>
+                <td>	
+					<ul>
+						<li id="ephone" style="display:none">
+						</li>
+					</ul>
+				</td>
+			</tr>
+
+
+			<tr>
+				<td><label>Password</label>
+				</td>
+
+				<td>
+					<input type="password" id="passwrd" name="passwrd" placeholder="Enter your Password" type=
+					"text">
+				</td>
+                <td>	
+					<ul>
+						<li id="epasswrd" style="display:none">
+						</li>
+					</ul>
+				</td>
+			</tr>
+
+
+			<tr>
+				<td type="hidden">
+				</td>
+
+				<td><button id="onsubmit" style="float:right;">Validate</button>
+				</td>
+			</tr>
+		</table>
+	</div>
+	<script src=
+	"https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">
+	</script> 
+	<script>
+	$(document).ready(function(){
+	   $("#onsubmit").click(function(){
+	       //validating name field -- check for numerical value
+	       var name = $('#name').val();
+	       $("li").css("display",'unset'); 
+	       if(name.length > 0)
+	       {
+	       for (var i = name.length - 1; i >= 0; i--) {
+	           if($.isNumeric( name[i] ))
+	           {
+	               $("#ename").html("Name field should not contanin any numeric value");
+	               $("#ename").css("color",'red');
+	               break;
+	           }
+	           if(i==0)
+	           {
+	            $("#ename").html("Valid Name");
+	            $("#ename").css("color",'green');
+	           }
+	       };  
+	       }
+	       else
+	       {
+	           $("#ename").html("This field is required");
+	           $("#ename").css("color",'red');
+	       }
+
+	       //validating email field
+	       var emailid = $('#mailid').val();
+	       if(emailid.length > 0)
+	       {
+	        var email = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+
+	       if (email.test(emailid)) {
+	          $("#emailid").html("Valid email address");
+	          $("#emailid").css("color",'green'); 
+	       }
+	       else
+	       {
+	       	  $("#emailid").html("Invalid email address");
+	          $("#emailid").css("color",'red'); 	
+	       }
+	       }
+	       else
+	       {
+	          $("#emailid").html("This field is required");
+	          $("#emailid").css("color",'red'); 	
+	       }
+
+	       //validating phone number field
+	       var phone = $('#phone').val();
+	       if(phone.length > 0)
+	       {
+	        var phoneregex = /^(\+91[\-\s]?)?[0]?(91)?[789]\d{9}$/;
+	       if (phoneregex.test(phone)) {
+	          $("#ephone").html("Valid Phone number");
+	          $("#ephone").css("color",'green'); 
+	       }
+	       else
+	       {
+	       	  $("#ephone").html("Invalid phone number");
+	          $("#ephone").css("color",'red'); 	
+	       }
+	       }
+	       else
+	       {
+	          $("#ephone").html("This field is required");
+	          $("#ephone").css("color",'red'); 	
+	       }
+
+	       //validating password field
+	       var paswrd = $('#passwrd').val();
+	       if(paswrd.length > 0)
+	       {
+	       if (paswrd.length < 8 ) {
+	          $("#epasswrd").html("Password size should be minimum 8 characters");
+	          $("#epasswrd").css("color",'red'); 
+	       }
+	       else
+	       {
+	       	  $("#epasswrd").html("valid password");
+	          $("#epasswrd").css("color",'green'); 	
+	       }
+	       }
+	       else
+	       {
+	          $("#epasswrd").html("This field is required");
+	          $("#epasswrd").css("color",'red'); 	
+	       }
+	   });
+	});
+	</script>
+</body>
+</html>

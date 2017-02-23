@@ -1,0 +1,91 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<style>
+.example_path {
+	position: relative;
+	overflow: hidden;
+	width: 530px;
+	height: 30px;
+	border: 3px solid #000;
+}
+
+.example_path .example_block {
+	position: absolute;
+	background-color: blue;
+	width: 30px;
+	height: 20px;
+	padding-top: 10px;
+	text-align: center;
+	color: #fff;
+	font-size: 10px;
+	white-space: nowrap;
+}
+#container {
+  width: 400px;
+  height: 400px;
+  position: relative;
+  background: yellow;
+}
+#animate {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  background-color: red;
+}
+</style>
+<script>
+function move(elem) {
+
+  var left = 0
+
+  function frame() {
+    
+    left++  // update parameters 
+    
+    elem.style.left = left + 'px' // show frame 
+
+    if (left == 100)  // check finish condition
+      clearInterval(id)
+  }
+
+  var id = setInterval(frame, 10) // draw every 10ms
+}
+</script>
+</head>
+
+<body>
+	<h1>Animation 1</h1>
+<div onclick="move(this.children[0])" class="example_path">
+	<div class="example_block"></div>
+</div>
+
+<div>
+	<h1>Animation 2</h1>
+	<p>
+<button onclick="myMove()">Click Me</button>
+</p> 
+
+<div id ="container">
+<div id ="animate"></div>
+</div>
+
+<script>
+function myMove() {
+  var elem1 = document.getElementById("animate");   
+  var pos = 0;
+  var id1 = setInterval(frame1, 5);
+  function frame1() {
+    if (pos == 350) {
+      clearInterval(id1);
+    } else {
+      pos++; 
+      elem1.style.top = pos + 'px'; 
+      elem1.style.left = pos + 'px'; 
+    }
+  }
+}
+</script>
+</div>
+</body>
+</html>
