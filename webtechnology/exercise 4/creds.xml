@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LOGS>
+  <CRED>
+    <USERNAME>Ajith</USERNAME>
+    <MAILID>ajith@gmail.com</MAILID>
+  </CRED>
+
+  <CRED>
+    <USERNAME>Kumar</USERNAME>
+    <MAILID>kumar@gmail.com</MAILID>
+  </CRED>
+
+  <CRED>
+    <USERNAME>Hello</USERNAME>
+    <MAILID>hello@gmail.com</MAILID>
+  </CRED>
+
+  <CRED>
+    <USERNAME>World</USERNAME>
+    <MAILID>world@gmailcom</MAILID>
+  </CRED>
+</LOGS>
