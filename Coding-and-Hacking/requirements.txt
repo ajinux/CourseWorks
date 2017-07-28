@@ -1,0 +1,5 @@
+numpy
+pandas
+HtmlParser
+requests
+bs4
