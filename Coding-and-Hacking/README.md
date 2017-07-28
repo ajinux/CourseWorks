@@ -7,15 +7,15 @@
 
 ### Sample Website :
 https://www.pricedekho.com/laptops/laptops-price-list.html
-![pricedekho](Coding-and-Hacking/pictures/pic3.png)
+![pricedekho](/Coding-and-Hacking/pictures/pic3.png)
 
 
 #### Output1:
-![sample picture 1](Coding-and-Hacking/pictures/pic1.png)
+![sample picture 1](/Coding-and-Hacking/pictures/pic1.png)
 
 
 #### Output2:
-![sample picture 2](Coding-and-Hacking/pictures/pic2.png)
+![sample picture 2](/Coding-and-Hacking/pictures/pic2.png)
 
 
 ```json
