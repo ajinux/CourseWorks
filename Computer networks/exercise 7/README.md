@@ -14,5 +14,5 @@ PROJECT DETAILS
 3. Vlans, Trunk ports, spanning tree protocol etc...
 
 ##### Screenshot  
-![Screenshot 1](CourseWorks/Computer networks/exercise 7/kct_network01.PNG)
-![Screenshot 2](CourseWorks/Computer networks/exercise 7/kct_network02.PNG)
+![Screenshot 1](https://raw.githubusercontent.com/Ajithkumarsekar/CourseWorks/master/Computer%20networks/exercise%207/kct_network01.PNG)
+![Screenshot 2](https://raw.githubusercontent.com/Ajithkumarsekar/CourseWorks/master/Computer%20networks/exercise%207/kct_network02.PNG)
