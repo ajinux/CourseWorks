@@ -14,5 +14,5 @@ PROJECT DETAILS
 3. Vlans, Trunk ports, spanning tree protocol etc...
 
 ##### Screenshot  
-![Screenshot 1](kct_network01)
-![Screenshot 2](kct_network02)
+![Screenshot 1](kct_network01.png)
+![Screenshot 2](kct_network02.png)
