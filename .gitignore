@@ -1,2 +1,9 @@
+# Eclipse
+.classpath
+.project
+.settings/
+.metadata/
+RemoteSystemsTempFiles/
+
 *.o
 *.exe
