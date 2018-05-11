@@ -40,9 +40,6 @@ class BlackColor extends Color{
 		return colorName;
 	}
 	
-	public String getRGP(){
-		return "255,255,244";
-	}
 }
 
 class WhiteColor extends Color{
@@ -55,9 +52,6 @@ class WhiteColor extends Color{
 		return colorName;
 	}
 	
-	public String getRGP(){
-		return "0,0,0";
-	}
 }
 
 class ColorStore{
